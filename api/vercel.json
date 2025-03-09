@@ -10,7 +10,7 @@
       {
         "src": "/api/(.*)", 
         "headers": {
-          "Access-Control-Allow-Origin": "https://logi-tracker-ihzh.vercel.app",
+          "Access-Control-Allow-Origin": "https://cryptootracker.vercel.app",
           "Access-Control-Allow-Methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
           "Access-Control-Allow-Credentials": "true"
         },
