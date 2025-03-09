@@ -20,7 +20,7 @@ const Login = () => {
   async function handleSubmission(event) {
     event.preventDefault();
 
-    const url = "http://crypto-tracker-beta-opal.vercel.app/api/v1/login";
+    const url = "http://crypto-tracker-api-six.vercel.app/api/v1/login";
     const data = await fetch(url, {
       method: "POST",
       headers: {
