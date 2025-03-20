@@ -1,31 +1,32 @@
-import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Home = function () {
   return (
     <>
-      {/* credit: https://github.com/codebushi/gatsby-starter-lander */}
       <div>
         <main className="text-gray-900">
           <section className="pt-20 md:pt-40">
             <div className="container mx-auto px-8 lg:flex">
               <div className="text-center lg:text-left lg:w-1/2">
                 <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
-                  HI, Welcome to My Crypto Tracker APP
+                  👋Hi, Welcome to My CrypToTracker App!
                 </h1>
                 <p className="text-xl lg:text-2xl mt-6 font-light">
                   Free landing page template to promote your business startup
                   and generate leads for the offered services
                 </p>
                 <p className="mt-8 md:mt-12">
-                  <button
-                    type="button"
-                    className=" py-4 px-12 bg-teal-500 hover:bg-teal-600 rounded text-white"
-                  >
-                    Get Started
-                  </button>
+                  <Link to={"/login"}>
+                    <button
+                      type="button"
+                      className=" py-4 px-12 bg-teal-500 hover:bg-teal-600 rounded text-white"
+                    >
+                      Get Started
+                    </button>
+                  </Link>
                 </p>
-                <p className="mt-4 text-gray-600">
-                  Drive in the World of Crypto Currency!!
+                <p className="mt-4 text-gray-600 font-semibold">
+                  Dive in the World of Cryptocurrency! 🪙
                 </p>
               </div>
               <div className="lg:w-1/2">
@@ -591,9 +592,12 @@ const Home = function () {
                     className="p-12 rounded-lg border border-solid border-gray-200 mb-8"
                     style={{ boxShadow: "0 10px 28px rgba(0,0,0,.08)" }}
                   >
-                    <p className="font-semibold text-xl">Real-Time Price Tracking</p>
+                    <p className="font-semibold text-xl">
+                      Real-Time Price Tracking
+                    </p>
                     <p className="mt-4">
-                    Display live prices for thousands of cryptocurrencies across multiple exchanges.
+                      Display live prices for thousands of cryptocurrencies
+                      across multiple exchanges.
                     </p>
                   </div>
                 </div>
@@ -602,9 +606,12 @@ const Home = function () {
                     className="p-12 rounded-lg border border-solid border-gray-200 mb-8"
                     style={{ boxShadow: "0 10px 28px rgba(0,0,0,.08)" }}
                   >
-                    <p className="font-semibold text-xl">Portfolio Management</p>
+                    <p className="font-semibold text-xl">
+                      Portfolio Management
+                    </p>
                     <p className="mt-4">
-                    Track your personal cryptocurrency holdings, including purchases, sales, and current value.
+                      Track your personal cryptocurrency holdings, including
+                      purchases, sales, and current value.
                     </p>
                   </div>
                 </div>
@@ -613,9 +620,12 @@ const Home = function () {
                     className="p-12 rounded-lg border border-solid border-gray-200 mb-8"
                     style={{ boxShadow: "0 10px 28px rgba(0,0,0,.08)" }}
                   >
-                    <p className="font-semibold text-xl">Market News and Analysis</p>
+                    <p className="font-semibold text-xl">
+                      Market News and Analysis
+                    </p>
                     <p className="mt-4">
-                    Provide up-to-date news, articles, and analysis on the cryptocurrency market.
+                      Provide up-to-date news, articles, and analysis on the
+                      cryptocurrency market.
                     </p>
                   </div>
                 </div>

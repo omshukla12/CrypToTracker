@@ -7,7 +7,7 @@ const Cards = ({ data, checker }) => {
       {data.map((elementOfArray, index) => {
         return (
           <Card
-            key={elementOfArray.id}
+            key={index}
             item={checker === "top10" ? elementOfArray.item : elementOfArray}
             checker={checker}
           />

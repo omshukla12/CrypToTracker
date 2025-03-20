@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const users = require("../model/users");
 const bcrypt = require("bcrypt");
-var jwt = require("jsonwebtoken");
+const users = require("../model/users");
 
 router.post("/login", async (req, res) => {
   const isUserThere = await users.findOne({ email: req.body.email });
+
   if (isUserThere === null) {
     return res.json({ status: false, message: "User not found" });
   } else {
@@ -13,7 +13,6 @@ router.post("/login", async (req, res) => {
       req.body.password,
       isUserThere.password
     );
-
     if (isPasswordMatch) {
       res.json({
         status: true,
@@ -26,10 +25,7 @@ router.post("/login", async (req, res) => {
 });
 
 router.post("/createuser", async (req, res) => {
-  console.log(req.body);
-
   const isUserThere = await users.findOne({ email: req.body.email });
-  console.log(isUserThere);
 
   if (isUserThere === null) {
     const salt = bcrypt.genSaltSync(10);

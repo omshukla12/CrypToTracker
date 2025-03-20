@@ -20,7 +20,7 @@ const Login = () => {
   async function handleSubmission(event) {
     event.preventDefault();
 
-    const url = "http://crypto-tracker-api-six.vercel.app/api/v1/login";
+    const url = `${process.env.REACT_APP_BACKEND_URI}login`;
     const data = await fetch(url, {
       method: "POST",
       headers: {

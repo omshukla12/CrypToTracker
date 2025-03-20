@@ -12,8 +12,7 @@ const Trending = () => {
     if (user === "") {
       navigate("/");
     } else {
-      const url =
-        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false";
+      const url = `${process.env.REACT_APP_CG_API_URI}coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false`;
 
       fetch(url)
         .then((response) => response.json())

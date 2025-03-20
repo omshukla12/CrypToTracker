@@ -23,7 +23,7 @@ const Signin = () => {
   async function handleSubmit(event) {
     event.preventDefault();
     console.log(formData);
-    const url = "http://crypto-tracker-api-six.vercel.app/api/v1/createuser";
+    const url = `${process.env.REACT_APP_BACKEND_URI}createuser`;
     const data = await fetch(url, {
       method: "POST",
       headers: new Headers({ "content-type": "application/json" }),

@@ -7,7 +7,7 @@ const CoinByID = () => {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    fetch(`https://api.coingecko.com/api/v3/coins/${id}`)
+    fetch(`${process.env.REACT_APP_CG_API_URI}coins/${id}`)
       .then((response) => response.json())
       .then((response) => setData(response))
       .catch((err) => console.error(err));
